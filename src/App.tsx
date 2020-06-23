@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ReactGA from 'react-ga';
+
 function App() {
   return (
     <div className="App">
@@ -14,8 +16,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -23,4 +24,8 @@ function App() {
   );
 }
 
+function initializeReactGA(){
+  ReactGA.initialize('UA-170070322-2')
+  ReactGA.pageview('/')
+}
 export default App;
