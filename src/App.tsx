@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
 // import createBrowserhistory from 'history'
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import GAListener from './GAListener';
+import { Helmet } from 'react-helmet';
 // import { withTracker } from './withTracker';
 // ReactGA.initialize('UA-170070322-2');
 // ReactGA.pageview('/');
 // const history = createBrowserhistory()
+import SendBirdCall from 'sendbird-calls'
 
+SendBirdCall.init('ssssss')
 // initializeReactGA();
 function App() {
   return (
@@ -52,14 +55,38 @@ function App() {
 // }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <>
+      <Helmet>
+        <title>Here's the Home Title!</title>
+        <meta name="description" content="meta content" />
+      </Helmet>
+      <h2>Home</h2>
+    </>
+  );
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (
+    <>
+      <Helmet>
+        <title>Here's the About Title!</title>
+        <meta name="description" content="meta content" />
+      </Helmet>
+      <h2>About</h2>
+    </>
+  );
 }
 
 function Users() {
-  return <h2>Users</h2>;
+  return (
+    <>
+      <Helmet>
+        <title>Here's the Users Title!</title>
+        <meta name="description" content="meta content" />
+      </Helmet>
+      <h2>Users</h2>
+    </>
+  );
 }
 export default App;
